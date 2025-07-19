@@ -23,6 +23,8 @@ const useAddTodo = (onAdd: () => void) => {
         ...todos,
       ]);
 
+      onAdd();
+
       return { previousTodos };
     },
     onSuccess: (savedTodo, newTodo) => {
